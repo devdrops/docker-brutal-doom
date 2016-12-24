@@ -14,10 +14,11 @@ LABEL org.label-schema.name="DevDrops/DockerBrutalDoom" \
 COPY ./sources /sources
 
 RUN apt-get update && \
-    apt-get install python-software-properties -y
+    apt-get -y install curl wget build-essential software-properties-common apt-transport-https && \
+    apt-get -qq update
 
-RUN apt-add-repository 'deb http://debian.drdteam.org/ stable multiverse' && \
-    wget -O - http://debian.drdteam.org/drdteam.gpg | sudo apt-key add -
+RUN apt-add-repository "deb http://debian.drdteam.org/ stable multiverse" && \
+    wget -O - http://debian.drdteam.org/drdteam.gpg | apt-key add -
 
 RUN apt-get install zandronum
 
