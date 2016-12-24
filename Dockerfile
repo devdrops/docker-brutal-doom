@@ -8,7 +8,7 @@ ARG BUILD_DATE
 LABEL org.label-schema.name="DevDrops/DockerBrutalDoom" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.vcs-url="" \
+      org.label-schema.vcs-url="https://github.com/devdrops/docker-brutal-doom" \
       org.label-schema.schema-version="1.0"
 
 COPY ./sources /sources
