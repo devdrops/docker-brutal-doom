@@ -1,3 +1,3 @@
 #!/bin/sh
 cd $HOME/.local/share/zandronum
-zandronum -file DoomMetalVol4.wad brutal19.pk3
+zandronum -file /sources/doommetal/DoomMetalVol4.wad /sources/brutaldoom20b/brutal20.pk3
